@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://beug5sxr5414g"]
+[gd_scene load_steps=5 format=3 uid="uid://beug5sxr5414g"]
 
 [ext_resource type="Texture2D" uid="uid://7kwi5nac1nq5" path="res://assets/Player/player-white.png" id="1_g0w7s"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_vplnv"]
+[ext_resource type="Script" path="res://scenes/PhysicsController.gd" id="2_olxd7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cl25g"]
 size = Vector2(4, 6)
@@ -10,6 +11,10 @@ size = Vector2(4, 6)
 scale = Vector2(5, 5)
 script = ExtResource("1_vplnv")
 metadata/_edit_group_ = true
+
+[node name="PhysicsController" type="Node2D" parent="."]
+scale = Vector2(1, 1)
+script = ExtResource("2_olxd7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_g0w7s")
@@ -20,3 +25,4 @@ shape = SubResource("RectangleShape2D_cl25g")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
+drag_vertical_enabled = true
