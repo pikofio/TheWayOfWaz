@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnibibgjtxlpu"]
+
+[ext_resource type="Texture2D" uid="uid://dhp1j5gqblkhi" path="res://assets/city/scene1.aseprite" id="1_yc70g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37b5j"]
+size = Vector2(300, 7.99997)
+
+[node name="city1" type="StaticBody2D"]
+z_index = 1
+scale = Vector2(5, 5)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yc70g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.09159e-06, 60)
+shape = SubResource("RectangleShape2D_37b5j")

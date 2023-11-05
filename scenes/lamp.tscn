@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhd08652qtcgl"]
+
+[ext_resource type="Texture2D" uid="uid://cfc2tdkiyw2fo" path="res://assets/decors/city_lamp1.aseprite" id="1_p6tcc"]
+
+[node name="Lamp" type="Node2D"]
+z_index = 5
+position = Vector2(0, -1)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p6tcc")

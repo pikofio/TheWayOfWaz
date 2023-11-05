@@ -1,120 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://cohfpwlcdxu28"]
 
 [ext_resource type="PackedScene" uid="uid://beug5sxr5414g" path="res://scenes/player.tscn" id="1_7gyp1"]
-[ext_resource type="Texture2D" uid="uid://dpwirx7cvired" path="res://icon.svg" id="2_t74da"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ie27k"]
-size = Vector2(128.2, 128)
+[ext_resource type="PackedScene" uid="uid://cnibibgjtxlpu" path="res://scenes/city_1.tscn" id="1_xiivr"]
+[ext_resource type="PackedScene" uid="uid://bhd08652qtcgl" path="res://scenes/lamp.tscn" id="2_11ato"]
 
 [node name="Main" type="Node"]
 
+[node name="city1" parent="." instance=ExtResource("1_xiivr")]
+position = Vector2(569, 144)
+
+[node name="Lamp" parent="city1" instance=ExtResource("2_11ato")]
+position = Vector2(-100, 39)
+
+[node name="Lamp2" parent="city1" instance=ExtResource("2_11ato")]
+position = Vector2(-10, 39)
+
+[node name="Lamp3" parent="city1" instance=ExtResource("2_11ato")]
+position = Vector2(80, 39)
+
 [node name="Player" parent="." instance=ExtResource("1_7gyp1")]
-position = Vector2(543, 309)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(379, 466)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(1264, 362)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(1264, 277)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(-206, 351)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2(-206, 266)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2(1264, 177)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="."]
-position = Vector2(1264, 92)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="."]
-position = Vector2(-206, 145)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="."]
-position = Vector2(-206, 60)
-scale = Vector2(10, 1)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9"]
-texture = ExtResource("2_t74da")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ie27k")
+position = Vector2(569, 380)
