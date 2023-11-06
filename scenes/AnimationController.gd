@@ -11,41 +11,23 @@ func _process(delta):
 	pass
 
 func _on_physics_controller_is_idle():
+	disable_all()
 	animator["parameters/conditions/IS_IDLE"] = true
-	
-	animator["parameters/conditions/IS_WALKING"] = false
-	animator["parameters/conditions/IS_RUNNING"] = false
-	animator["parameters/conditions/IS_FALLING"] = false
-	animator["parameters/conditions/IS_JUMPING"] = false
 
 func _on_physics_controller_is_moving():
+	disable_all()
 	animator["parameters/conditions/IS_WALKING"] = true
-	
-	animator["parameters/conditions/IS_IDLE"] = false
-	animator["parameters/conditions/IS_RUNNING"] = false
-	animator["parameters/conditions/IS_FALLING"] = false
-	animator["parameters/conditions/IS_JUMPING"] = false
 
 func _on_physics_controller_is_running():
+	disable_all()
 	animator["parameters/conditions/IS_RUNNING"] = true
 	
-	animator["parameters/conditions/IS_IDLE"] = false
-	animator["parameters/conditions/IS_WALKING"] = false
-	animator["parameters/conditions/IS_FALLING"] = false
-	animator["parameters/conditions/IS_JUMPING"] = false
-
-func _on_physics_controller_is_falling():
-	animator["parameters/conditions/IS_FALLING"] = true
-
-	animator["parameters/conditions/IS_JUMPING"] = false
-	animator["parameters/conditions/IS_RUNNING"] = false
-	animator["parameters/conditions/IS_IDLE"] = false
-	animator["parameters/conditions/IS_WALKING"] = false
-	
 func _on_physics_controller_is_jumping():
+	disable_all()
 	animator["parameters/conditions/IS_JUMPING"] = true
 	
-	animator["parameters/conditions/IS_FALLING"] = false
+func disable_all() ->void:
+	animator["parameters/conditions/IS_JUMPING"] = false
 	animator["parameters/conditions/IS_RUNNING"] = false
 	animator["parameters/conditions/IS_IDLE"] = false
 	animator["parameters/conditions/IS_WALKING"] = false
